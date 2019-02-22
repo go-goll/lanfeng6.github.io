@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[MySQL在Linux系统的安装配置]]></title>
-    <url>%2F2019%2F02%2F22%2FMySQL%E9%85%8D%E7%BD%AE%20%2F</url>
+    <url>%2F2019%2F02%2F22%2FMySQL%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%20%2F</url>
     <content type="text"><![CDATA[下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm 安装MySQL源: yum localinstall mysql57-community-release-el7-8.noarch.rpm 安装MySQL: yum install mysql-community-server 设置开启启动MySQL服务: systemctl enable mysqld 启动/重启MySQL服务：systemctl restart mysqld 查看MySQL初始密码：grep ‘A temporary password’ /var/log/mysqld.log 更改MySQL密码：mysqladmin -u root -p’旧密码’ password ‘新密码’ 这里更改密码出了问题，更改失败，这是因为密码太过简单的原因。有两个接解决方法： 方法一：把密码设置复杂点（这是最直接的方法） 方法二：关闭mysql密码强度验证(validate_password) 编辑配置文件：vim /etc/my.cnf， 增加这么一行validate_password=off 编辑后重启mysql服务：systemctl restart mysqld 设置mysql能够远程访问: a. 登录进MySQL: mysql -uroot -p密码 b. 增加一个用户给予访问权限: grant all privileges on *.* to &#39;root&#39;@&#39;ip地址&#39; identified by &#39;密码&#39; with grant option; c. 刷新权限：flush privileges;­]]></content>
       <categories>
         <category>数据库</category>
