@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[Hexo博客搭建]]></title>
     <url>%2F2019%2F02%2F23%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[一. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js 首先在自己的电脑上创建一个空的文件夹’Hexo’ 在gitbash中终端中通过cd指令进入到刚才创建的文件夹中 输入指令 npm install -g hexo 安装Hexo 输入指令 hexo init 进行初始化 依次输入指令npm install hexo server 启动服务器 博客内容发生改变后可以通过hexo clean hexo generate hexo deploy hexo server刷新后重新启动 二. 部署博客 在github上创建一个空的仓库，仓库名： 用户名.github.io 修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容 使用git部署, 输入指令npm install hexo-deployer-git --save 输入指令hexo clean hexo generate hexo deploy 对博客进行提交]]></content>
+    <content type="text"><![CDATA[一. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js 1 . 首先在自己的电脑上创建一个空的文件夹’Hexo’2 . 在gitbash中终端中通过cd指令进入到刚才创建的文件夹中3 . 输入指令 npm install -g hexo 安装Hexo4 . 输入指令 hexo init 进行初始化5 . 依次输入指令npm install hexo server 启动服务器 博客内容发生改变后可以通过hexo clean hexo generate hexo deploy hexo server刷新后重新启动 二. 部署博客1 . 在github上创建一个空的仓库，仓库名： 用户名.github.io2 . 修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容 3 . 使用git部署, 输入指令npm install hexo-deployer-git --save4 . 输入指令hexo clean hexo generate hexo deploy 对博客进行提交]]></content>
       <categories>
         <category>博客</category>
       </categories>
@@ -38,7 +38,7 @@
     <url>%2F2019%2F02%2F22%2FNginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口 ![打开安全组设置]添加80端口 2. 安装nginxa) 添加nginx存储库 1yum install epel-release b) 安装nginx 1234 yum install nginx``` c) 运行nginx Nginx不会自行启动。要运行Nginx systemctl start nginx 12nginx的运行命令: systemctl status nginx 查看nginx的状态 systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动 12d) 系统启动时启动Nginx systemctl enable nginx 12e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信： sudo firewall-cmd --permanent --zone=public --add-service=http sudo firewall-cmd --permanent --zone=public --add-service=https sudo firewall-cmd --reload 12345### 3.nginx目录共享配置 a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting b) 打开 etc/nginx/nginx.conf 文件，设置server #共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表 root /home/yuting; location / { autoindex on; autoindex_exact_size on; autoindex_localtime on; } 12除了可以共享文件，还可以自定义页面 #自定义服务器页面 location / { root /home/yuting; index index.html index.htm; } ` 注意： 如果出现权限问题，可以修改目录的权限 ssh密钥认证1.在主机和从机上执行：ssh-keygen 2.在从机上执行: scp id_rsa.pub root@主机地址:~/.ssh/master.pub(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’) 3.在主机中的.ssh文件夹中创建authorized_keys文件： touch authorized_keys 4.修改文件authorized_keys的权限: chmod 600 authorized_keys 5.将master.pub放进authorized_keys文件中: cat master.pub &gt;&gt; authorized_keys 6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中]]></content>
       <categories>
-        <category>服务器操作操作</category>
+        <category>服务器</category>
       </categories>
       <tags>
         <tag>Nginx</tag>
