@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Hexo 博客,">
 
 
 
@@ -79,15 +79,20 @@
 
 
 
-<meta name="keywords" content="Python 数据挖掘">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js     首先在自己的电脑上创建一个空的文件夹’Hexo’   在gitbash中终端中通过cd指令进入到刚才创建的文件夹中    输入指令 npm install -g hexo 安装Hexo   输入指令 hexo init 进行初始化   依次输入指令npm install hexo server 启">
+<meta name="keywords" content="Hexo 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/Hexo博客搭建/index.html">
 <meta property="og:site_name" content="追风少年">
+<meta property="og:description" content="###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js     首先在自己的电脑上创建一个空的文件夹’Hexo’   在gitbash中终端中通过cd指令进入到刚才创建的文件夹中    输入指令 npm install -g hexo 安装Hexo   输入指令 hexo init 进行初始化   依次输入指令npm install hexo server 启">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T02:33:18.225Z">
+<meta property="og:image" content="http://img2.ph.126.net/sec89iMO8bs-9YqIkfUAJg==/6599303974286070902.png">
+<meta property="og:updated_time" content="2019-02-23T03:58:21.658Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
+<meta name="twitter:title" content="Hexo博客搭建">
+<meta name="twitter:description" content="###1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js     首先在自己的电脑上创建一个空的文件夹’Hexo’   在gitbash中终端中通过cd指令进入到刚才创建的文件夹中    输入指令 npm install -g hexo 安装Hexo   输入指令 hexo init 进行初始化   依次输入指令npm install hexo server 启">
+<meta name="twitter:image" content="http://img2.ph.126.net/sec89iMO8bs-9YqIkfUAJg==/6599303974286070902.png">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/Hexo博客搭建/">
 
 
 
 
 
-  <title>标签 | 追风少年</title>
+  <title>Hexo博客搭建 | 追风少年</title>
   
 
 
@@ -287,7 +292,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
+	<h1 class="post-title" itemprop="name headline">Hexo博客搭建</h1>
 
 
 
@@ -299,14 +304,24 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 4 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Hexo-博客/" style="font-size: 12px; color: #ccc">Hexo 博客</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/Linux-博客/" style="font-size: 12px; color: #ccc">Linux 博客</a> <a href="/tags/Nginx/" style="font-size: 12px; color: #ccc">Nginx</a>
-            </div>
-          </div>
+          <p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
+<ol>
+<li>首先在自己的电脑上创建一个空的文件夹’Hexo’  </li>
+<li>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </li>
+<li>输入指令 <code>npm install -g hexo</code> 安装Hexo  </li>
+<li>输入指令 <code>hexo init</code> 进行初始化  </li>
+<li>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br> 博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动    </li>
+</ol>
+<p>###2. 部署博客  </p>
+<ol>
+<li>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </li>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="http://img2.ph.126.net/sec89iMO8bs-9YqIkfUAJg==/6599303974286070902.png" alt>  </p>
+</li>
+<li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
+</li>
+<li>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</li>
+</ol>
+
         
       </div>
       
@@ -324,6 +339,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
