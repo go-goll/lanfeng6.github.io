@@ -2,6 +2,7 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     mini: true,
     autoplay: true,
+    mutex: true,
     audio: [{
         name: 'kiss the rain',
         artist: 'YIRUMA',
