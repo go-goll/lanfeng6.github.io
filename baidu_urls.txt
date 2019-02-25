@@ -1,0 +1,7 @@
+https://www.wind6.cn/2019/02/25/sql基本语法/
+https://www.wind6.cn/2019/02/23/vim编辑器之神/
+https://www.wind6.cn/2019/02/23/Hexo博客搭建/
+https://www.wind6.cn/2019/02/22/MySQL在Linux系统的安装配置  - 副本/
+https://www.wind6.cn/2019/02/22/Nginx服务器安装/
+https://www.wind6.cn/2019/02/21/git常用指令/
+https://www.wind6.cn/2019/02/20/hello-world/
