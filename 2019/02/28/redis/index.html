@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Redis,">
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="Python 数据挖掘">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="https://www.wind6.cn/schedule/index.html">
+<meta name="description" content="123456789 [root@iZwz97tbgo9lkabnat2lo8Z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# gunzip redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# tar">
+<meta name="keywords" content="Redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis数据库基本操作">
+<meta property="og:url" content="https://www.wind6.cn/2019/02/28/redis/index.html">
 <meta property="og:site_name" content="追风少年">
+<meta property="og:description" content="123456789 [root@iZwz97tbgo9lkabnat2lo8Z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# gunzip redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# tar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-21T09:40:09.986Z">
+<meta property="og:updated_time" content="2019-02-28T09:34:43.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="schedule">
+<meta name="twitter:title" content="Redis数据库基本操作">
+<meta name="twitter:description" content="123456789 [root@iZwz97tbgo9lkabnat2lo8Z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# gunzip redis-3.2.12.tar.gz[root@iZwz97tbgo9lkabnat2lo8Z ~]# tar">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://www.wind6.cn/schedule/">
+  <link rel="canonical" href="https://www.wind6.cn/2019/02/28/redis/">
 
 
 
 
 
-  <title>schedule | 追风少年</title>
+  <title>Redis数据库基本操作 | 追风少年</title>
   
 
 
@@ -287,7 +290,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">schedule</h1>
+	<h1 class="post-title" itemprop="name headline">Redis数据库基本操作</h1>
 
 
 
@@ -299,7 +302,11 @@
       <div class="post-body">
         
         
-          
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> [root@iZwz97tbgo9lkabnat2lo8Z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# gunzip redis-3.2.12.tar.gz</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# tar -xvf redis-3.2.12.tar</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# cd redis-3.2.12</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# make &amp;&amp; make install</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# redis-server --version</span><br><span class="line">Redis server v=3.2.12 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=5bc5cd3c03d6ceb6</span><br><span class="line">[root@iZwz97tbgo9lkabnat2lo8Z ~]# redis-cli --version</span><br><span class="line">redis-cli 3.2.12</span><br></pre></td></tr></table></figure>
+<h2 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2.修改配置文件"></a>2.修改配置文件</h2><h2 id="3-启动redis"><a href="#3-启动redis" class="headerlink" title="3.启动redis"></a>3.启动redis</h2><p>####1.启动redis服务器<br>redis-server redis.conf     – 启动redis服务<br>redis-server redis.conf &amp;   – 启动redis服务并且在后台运行<br>redis-server redis.conf &gt;&gt; redis.log &amp;   – 启动redis服务并且在后台运行,并且输出重定向   </p>
+<p>####2.启动redis客户端<br>redis-cli -h ip地址  </p>
+<h2 id="4-redis指令"><a href="#4-redis指令" class="headerlink" title="4.redis指令"></a>4.redis指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">----字符串常用操作  </span><br><span class="line">set key value    -- 添加键值对、如果key存在就修改key对应的值  </span><br><span class="line">setnx key value  -- 如果key不存在就添加键值对</span><br><span class="line">setex key 时间 value  -- 添加键值对并且设置存活时间    </span><br><span class="line">set key value ex 时间   -- 添加键值对并且设置超时时间    </span><br><span class="line">mset key1 value1 key2 value2 ...   -- 同时添加多个键值对</span><br><span class="line">mget key1 key2 ...		--同时获取多个key的值 </span><br><span class="line">get key 			 -- 查看key对应的值    </span><br><span class="line">keys *				 -- 查看所有的key  </span><br><span class="line">del key1 key2		 -- 删除键值对    </span><br><span class="line">exists key		 -- 检测键值对是否存在  </span><br><span class="line">flushall 			 -- 删除所有数据库的所有键值对  </span><br><span class="line">flushdb 			 -- 删除当前数据库中所有键值对   </span><br><span class="line">select 标号       -- redis默认启动16个数据库对应的标号是0-15     </span><br><span class="line">ttl key 			 -- 查看剩余时间  </span><br><span class="line">expire key 时间   -- 设置键值对存活时间  </span><br><span class="line">incr key         -- 数值增加1 </span><br><span class="line">decr key			 -- 数值减少  </span><br><span class="line">append key 值     --key对应的字符串类型的值后追加指定的值  </span><br><span class="line"></span><br><span class="line">quit        -- 退出</span><br></pre></td></tr></table></figure>
+
         
       </div>
       
@@ -344,8 +351,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,6 +459,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改配置文件"><span class="nav-number">1.</span> <span class="nav-text">2.修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-启动redis"><span class="nav-number">2.</span> <span class="nav-text">3.启动redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-redis指令"><span class="nav-number">3.</span> <span class="nav-text">4.redis指令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
