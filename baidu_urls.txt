@@ -1,3 +1,5 @@
+https://www.wind6.cn/2019/02/28/mysql高级操作2/
+https://www.wind6.cn/2019/02/28/mysql高级操作/
 https://www.wind6.cn/2019/02/25/sql基本语法/
 https://www.wind6.cn/2019/02/23/vim编辑器之神/
 https://www.wind6.cn/2019/02/23/Hexo博客搭建/

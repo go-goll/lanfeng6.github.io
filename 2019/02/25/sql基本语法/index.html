@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="– sql基本语法– DDL数据定义操作– DML数据操作语言– DCL数据控制语言– 注意：SQL中大小写不明感，语句结尾必须用分号– 一DDL-主要提供数据库的表的创建，删除和修改– 1.创建数据库：CREATE DATABASE school; – 直接创建数据库CREATE DATABASE IF NOT EXISTS school；– 如果不存在就创建CREATE DATABASE IF">
+<meta name="description" content="drop database if exists hrs;create database hrs default charset utf8; use hrs; drop table if exists tb_emp;drop table if exists tb_dept; – 部门表create table tb_dept(dno int not null comment ‘编号’,dname v">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql基本语法">
+<meta property="og:title" content="sql高级操作2——高级查询例题">
 <meta property="og:url" content="https://www.wind6.cn/2019/02/25/sql基本语法/index.html">
 <meta property="og:site_name" content="追风少年">
-<meta property="og:description" content="– sql基本语法– DDL数据定义操作– DML数据操作语言– DCL数据控制语言– 注意：SQL中大小写不明感，语句结尾必须用分号– 一DDL-主要提供数据库的表的创建，删除和修改– 1.创建数据库：CREATE DATABASE school; – 直接创建数据库CREATE DATABASE IF NOT EXISTS school；– 如果不存在就创建CREATE DATABASE IF">
+<meta property="og:description" content="drop database if exists hrs;create database hrs default charset utf8; use hrs; drop table if exists tb_emp;drop table if exists tb_dept; – 部门表create table tb_dept(dno int not null comment ‘编号’,dname v">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-25T09:32:25.574Z">
+<meta property="og:updated_time" content="2019-02-28T01:30:12.346Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql基本语法">
-<meta name="twitter:description" content="– sql基本语法– DDL数据定义操作– DML数据操作语言– DCL数据控制语言– 注意：SQL中大小写不明感，语句结尾必须用分号– 一DDL-主要提供数据库的表的创建，删除和修改– 1.创建数据库：CREATE DATABASE school; – 直接创建数据库CREATE DATABASE IF NOT EXISTS school；– 如果不存在就创建CREATE DATABASE IF">
+<meta name="twitter:title" content="sql高级操作2——高级查询例题">
+<meta name="twitter:description" content="drop database if exists hrs;create database hrs default charset utf8; use hrs; drop table if exists tb_emp;drop table if exists tb_dept; – 部门表create table tb_dept(dno int not null comment ‘编号’,dname v">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>sql基本语法 | 追风少年</title>
+  <title>sql高级操作2——高级查询例题 | 追风少年</title>
   
 
 
@@ -290,7 +290,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">sql基本语法</h1>
+	<h1 class="post-title" itemprop="name headline">sql高级操作2——高级查询例题</h1>
 
 
 
@@ -302,7 +302,15 @@
       <div class="post-body">
         
         
-          <p>– sql基本语法<br>– DDL数据定义操作<br>– DML数据操作语言<br>– DCL数据控制语言<br>– 注意：SQL中大小写不明感，语句结尾必须用分号<br>– 一DDL-主要提供数据库的表的创建，删除和修改<br>– 1.创建数据库：<br>CREATE DATABASE school; – 直接创建数据库<br>CREATE DATABASE IF NOT EXISTS school；– 如果不存在就创建<br>CREATE DATABASE IF NOT EXISTS school DEFAULT CHARSET UTF8;<br>– 创建数据库的时候设置字符集编码方式为utf8，支持中文<br>– 2.删除数据库：<br>DROP DATABASE school;– 直接删除数据库<br>DROP DATABASE IF EXISTS school; – 如果存在才删除<br>– 3.切换/使用数据库：use 数据库<br>USE school;<br>– 4. 新建表：CREATE TABLE 表名（字段1 类型1，字段2 类型2，…）；<br>– 注意：a.表名一般需要加前缀’t’或者’tb’<br>– b.字段用来确定要存那些数据，名字随便命名，但是不能是关键字<br>– c.类型必须是mysql支持的数据类型<br>– 常用数据类型：int,char(size),varchar(size),text,BIT布尔，date日期<br>– 常用约束：NOT NULL  -不能为空，DEFAULT - 设置默认值，UNIQUE -唯一<br>– PRIMARY KEY -主键，主键是指表中能够唯一标识一条记录的字段（通过主键值能够找到表中唯一一行记录）<br>– auto_increment自动增长,只针对主键有效，并且主键类型是整型;<br>CREATE TABLE IF NOT EXISTS t_student<br>(stuid int PRIMARY KEY auto_increment,<br>stuname VARCHAR(20),<br>gender bit NOT NULL,<br>birth DATE<br>);<br>– 5.删除表：DROP TABLE IF EXISTS 表名;<br>– 清空表中记录：TRUNCATE 表名<br>DROP TABLE IF EXISTS t_student;<br>– 6.修改表：ALTER TABLE 表名 ADD COLUMN 字段名 字段类型 约束;<br>ALTER TABLE t_student ADD COLUMN sgrade FLOAT(5,2) NOT NULL;<br>– 7.删除字段：ALTER TABLE t_student DROP COLUMN 字段名<br>ALTER TABLE t_student DROP COLUMN sgrade;<br>– 二、DML数据操作语言 -主要是增删改查<br>– 1.增（增加记录）INSERT INTO 表名 VALUES(值1，值2，值3) -依次给指定表中的字段赋值<br>INSERT INTO t_student VALUES(1001,’张三’,1,’1996-10-23’);<br>– 1.2插入数据：INSERT INTO 表名(字段1，字段2….) VALUES(值1,值2);<br>– 注意：字符串的值要用引号引起来，时间可以是满足时间格式的字符串，也可以是时间函数获取的值<br>INSERT INTO t_student(stuname,gender) VALUES(‘李四’,0);<br>– 时间函数：NOW() -当前时间  YEAR(NOW()) -当前年 MONTH(NOW())当前月<br>INSERT INTO t_student(stuname,gender,birth) VALUES(‘鹏总’,0,date(NOW())),<br>(‘曾总’,1,date(NOW())),<br>(‘令总’,1,date(NOW()))<br>;<br>– 2.删除 DELETE FROM 表名；  -删除指定表中所有记录<br>DELETE FROM t_student;<br>– 2.1 DELETE FROM 表名 WHERE 条件语句； -删除满足条件的记录<br>– 条件语句：=（判断是否相等）,&lt;&gt;(不等于),&gt;=,&lt;=<br>DELETE FROM t_student WHERE stuid=1002;<br>– 3.改 UPDATE 表名 SET 字段=新值;  将指定表中所有的指定列/字段的值赋值为新值<br>– 3.2，满足条件的改变：UPDATE 表名 SET 字段1=新值1，字段2=新值2…WHERE 条件语句<br>– %通配符：表示任意个数的任意字符（包括0个）<br>– _通配符：表示一个任意字符<br>UPDATE t_student SET birth=’1995-2-3’ WHERE stuname=’曾总’;<br>UPDATE t_student SET birth=’1996-6-6’ WHERE stuname LIKE ‘%总’;<br>UPDATE t_student SET birth=’1986-6-6’ WHERE stuname LIKE ‘曾_’;– 匹配两个名字姓曾的人<br>– 4.查 直接查询 SELECT <em> FROM 表名；   获取所有数据<br>SELECT </em> FROM t_student;<br>– 4.2 SELECT 字段1，字段2，…FROM 表名; -获取指定表中所有行指定的列<br>SELECT stuname FROM t_student;<br>– 4.3获取所有满足条件的行：SELECT <em> FROM 表名 WHERE 条件；<br>SELECT </em> FROM t_student WHERE gender=0;<br>– 4.4 列重命名<br>– SELECT 字段1 as 新字段1，字段2 as 新字段2… FROM 表名;<em>不能重命名<br>– as可以省略，但是最好不省略<br>SELECT stuname AS ‘姓名’,stuid AS ‘学号’ FROM t_student;<br>– 4.5 对查询结果重新复制（一般针对布尔数据）<br>– SELECT IF(字段相关的条件语句，值1，值2) FROM 表名;  -查询指定字段，并且判断字段对应的值是0还是1<br>– 如果是1结果为值1，如果是0结果为值2，这儿的if用法是MySQL专有的。<br>SELECT stuname,IF(gender,’男’,’女’) AS ‘性别’ FROM t_student;<br>SELECT CASE gender<br>    WHEN 1 THEN<br>        ‘男’<br>    ELSE<br>        ‘女’<br>END FROM t_student;<br>– 4.6列的合并运算<br>– SELECT CONCAT(str1,str2,…) FROM 表名;<br>SELECT CONCAT(stuname,stuid) FROM t_student;<br>–  注意：数字和字符串数据可以合并，bit类型数据不可以合并<br>– 4.7模糊查询  -查询的时候通过like条件来指定查询对象<br>– sql支持逻辑运算符and和or，NOT<br>SELECT </em> FROM t_student WHERE stuname LIKE ‘%总’ AND stuid &gt; 1008;<br>– 4.8 排序(先按之前的任何语法进行查询再排序)<br>– SELECT <em> FROM 表名 ORDER BY 字段;对查询结果按照指定字段的值进行升序排序<br>– 联排，ORDER BY 后面跟多个条件，条件之间用,隔开<br>SELECT </em> FROM t_student ORDER BY gender ASC,stuid DESC; – 升序<br>SELECT <em> FROM t_student ORDER BY gender DESC; – 降序<br>– 4.9 限制<br>– SELECT </em> FROM 表名 LIMIT 数字；  -获取查询结果的前指定条数记录<br>SELECT <em> FROM t_student LIMIT 3;<br>– SELECT </em> FROM 表名 LIMIT 数字 OFFSET N; –对查询结果跳过前N条数据，取M条记录出来<br>SELECT * FROM t_student LIMIT 3 OFFSET 2;</p>
+          <p>drop database if exists hrs;<br>create database hrs default charset utf8;</p>
+<p>use hrs;</p>
+<p>drop table if exists tb_emp;<br>drop table if exists tb_dept;</p>
+<p>– 部门表<br>create table tb_dept<br>(<br>dno int not null comment ‘编号’,<br>dname varchar(10) not null comment ‘名称’,<br>dloc varchar(20) not null comment ‘所在地’,<br>primary key (dno)<br>);</p>
+<p>insert into tb_dept values<br>    (10, ‘会计部’, ‘北京’),<br>    (20, ‘研发部’, ‘成都’),<br>    (30, ‘销售部’, ‘重庆’),<br>    (40, ‘运维部’, ‘深圳’);</p>
+<p>– 员工表<br>create table tb_emp<br>(<br>eno int not null comment ‘员工编号’,<br>ename varchar(20) not null comment ‘员工姓名’,<br>job varchar(20) not null comment ‘员工职位’,<br>mgr int comment ‘主管编号’,<br>sal int not null comment ‘员工月薪’,<br>comm int comment ‘每月补贴’,<br>dno int comment ‘所在部门编号’,<br>primary key (eno)<br>);</p>
+<p>alter table tb_emp add constraint fk_emp_dno foreign key (dno) references tb_dept (dno);</p>
+<p>insert into tb_emp values<br>    (7800, ‘张三丰’, ‘总裁’, null, 9000, 1200, 20),<br>    (2056, ‘乔峰’, ‘分析师’, 7800, 5000, 1500, 20),<br>    (3088, ‘李莫愁’, ‘设计师’, 2056, 3500, 800, 20),<br>    (3211, ‘张无忌’, ‘程序员’, 2056, 3200, null, 20),<br>    (3233, ‘丘处机’, ‘程序员’, 2056, 3400, null, 20),<br>    (3251, ‘张翠山’, ‘程序员’, 2056, 4000, null, 20),<br>    (5566, ‘宋远桥’, ‘会计师’, 7800, 4000, 1000, 10),<br>    (5234, ‘郭靖’, ‘出纳’, 5566, 2000, null, 10),<br>    (3344, ‘黄蓉’, ‘销售主管’, 7800, 3000, 800, 30),<br>    (1359, ‘胡一刀’, ‘销售员’, 3344, 1800, 200, 30),<br>    (4466, ‘苗人凤’, ‘销售员’, 3344, 2500, null, 30),<br>    (3244, ‘欧阳锋’, ‘程序员’, 3088, 3200, null, 20),<br>    (3577, ‘杨过’, ‘会计’, 5566, 2200, null, 10),<br>    (3588, ‘朱九真’, ‘会计’, 5566, 2500, null, 10);</p>
+<p>– 查询薪资最高的员工姓名和工资<br>use hrs;<br>(SELECT MAX(max_emp) as maxmax FROM (SELECT ename,sal+IF(comm,comm,0) as max_emp FROM tb_emp) as a1);<br>SELECT ename,sal+IF(comm,comm,0) as ‘工资’ FROM tb_emp WHERE sal+IF(comm,comm,0)=(SELECT MAX(max_emp) as maxmax FROM (SELECT ename,sal+IF(comm,comm,0) as max_emp FROM tb_emp) as a1);<br>– 查询员工的姓名和年薪((月薪+补贴)<em>12)<br>SELECT ename as ‘姓名’,(sal+IF(comm,comm,0))</em>12 as ‘年薪’ FROM tb_emp;<br>– 查询有员工的部门的编号和人数<br>SELECT dno,COUNT(dno) FROM tb_emp GROUP BY dno;<br>– 查询所有部门的名称和人数<br>SELECT tb_dept.dno,COUNT(tb_emp.dno) FROM tb_dept LEFT JOIN  tb_emp ON tb_dept.dno=tb_emp.dno GROUP BY tb_dept.dno;<br>– 查询薪资最高的员工(Boss除外)的姓名和工资<br>SELECT ename,sal+IF(comm,comm,0) as ‘工资’ FROM tb_emp WHERE sal+IF(comm,comm,0)=(SELECT MAX(max_emp) as maxmax FROM (SELECT ename,sal+IF(comm,comm,0) as max_emp FROM tb_emp WHERE mgr is NOT NULL) as a1);<br>– 查询薪水超过平均薪水的员工的姓名和工资<br>SELECT ename,sal+IF(comm,comm,0) as ‘工资’ FROM tb_emp WHERE sal+IF(comm,comm,0)&gt;(SELECT AVG(sal)+SUM(comm)/COUNT(ename) FROM tb_emp);<br>– 查询薪水超过其所在部门平均薪水的员工的姓名、部门编号和工资<br>SELECT dno,AVG(count_sal) as davg FROM (SELECT ename,dno,IF(comm,sal+comm,sal) as count_sal FROM tb_emp) as a2 GROUP BY a2.dno;<br>SELECT ename,dno,IF(comm,sal+comm,sal) FROM tb_emp WHERE IF(comm,sal+comm,sal)&gt;(SELECT davg FROM (SELECT dno,AVG(count_sal) as davg FROM (SELECT ename,dno,IF(comm,sal+comm,sal) as count_sal FROM tb_emp) as a2 GROUP BY a2.dno) as a3 WHERE a3.dno=tb_emp.dno)<br>– 查询部门中薪水最高的人姓名、工资和所在部门名称<br>SELECT ename,dno,IF(comm,sal+comm,sal) FROM tb_emp WHERE IF(comm,sal+comm,sal)=(SELECT davg FROM (SELECT dno,MAX(count_sal) as davg FROM (SELECT ename,dno,IF(comm,sal+comm,sal) as count_sal FROM tb_emp) as a2 GROUP BY a2.dno) as a3 WHERE a3.dno=tb_emp.dno)<br>– 查询主管的姓名和职位<br>SELECT ename,job FROM tb_emp WHERE eno in (SELECT DISTINCT mgr FROM tb_emp);<br>– 查询薪资排名4~6名的员工姓名和工资<br>SELECT ename,IF(comm,sal+comm,sal) as count_com FROM tb_emp ORDER BY count_com DESC LIMIT 3 OFFSET 3;</p>
 
         
       </div>
@@ -366,7 +374,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

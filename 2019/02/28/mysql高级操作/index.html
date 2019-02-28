@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="MySQL,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Python 数据挖掘 文艺青年 数据分析 大数据 爬虫 HTML">
-<meta name="keywords" content="Python 数据挖掘">
-<meta property="og:type" content="website">
-<meta property="og:title" content="追风少年">
-<meta property="og:url" content="https://www.wind6.cn/tags/Nginx/index.html">
+<meta name="description" content="sql条件语句:     =            &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 等于   &amp;lt;&amp;gt;        &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 不等于   &amp;gt;            &amp;emsp;&amp;emsp;&amp;emsp;&amp;">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql高级操作及常见查询">
+<meta property="og:url" content="https://www.wind6.cn/2019/02/28/mysql高级操作/index.html">
 <meta property="og:site_name" content="追风少年">
-<meta property="og:description" content="Python 数据挖掘 文艺青年 数据分析 大数据 爬虫 HTML">
+<meta property="og:description" content="sql条件语句:     =            &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 等于   &amp;lt;&amp;gt;        &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 不等于   &amp;gt;            &amp;emsp;&amp;emsp;&amp;emsp;&amp;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-28T01:28:37.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="追风少年">
-<meta name="twitter:description" content="Python 数据挖掘 文艺青年 数据分析 大数据 爬虫 HTML">
+<meta name="twitter:title" content="sql高级操作及常见查询">
+<meta name="twitter:description" content="sql条件语句:     =            &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 等于   &amp;lt;&amp;gt;        &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;– 不等于   &amp;gt;            &amp;emsp;&amp;emsp;&amp;emsp;&amp;">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://www.wind6.cn/tags/Nginx/">
+  <link rel="canonical" href="https://www.wind6.cn/2019/02/28/mysql高级操作/">
 
 
 
 
 
-  <title>标签: Nginx | 追风少年</title>
+  <title>sql高级操作及常见查询 | 追风少年</title>
   
 
 
@@ -144,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband">
 				<a href="https://github.com/lanfeng6" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 		</div>
@@ -282,52 +283,88 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Nginx<small>标签</small>
-        </h1>
-      </div>
+	<h1 class="post-title" itemprop="name headline">sql高级操作及常见查询</h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
         
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/02/22/Nginx服务器安装/" itemprop="url">
-              
-                <span itemprop="name">Nginx服务器</span>
-              
-            </a>
-        
-      </h2>
+          <p><strong>sql条件语句:</strong>   </p>
+<ul>
+<li>=            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 等于  </li>
+<li>&lt;&gt;        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 不等于  </li>
+<li><code>&gt;</code>            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 大于  </li>
+<li>&lt;            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 小于  </li>
+<li><blockquote>
+<p>=        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 大于等于  </p>
+</blockquote>
+</li>
+<li>&lt;=        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 小于等于  </li>
+<li>and        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 逻辑与运算</li>
+<li>or        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 逻辑或运算  </li>
+<li><p>in         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;–    集合运算; 例如： stuid in(1001， 1002); 选中stuid值是1001和1002的行  </p>
+</li>
+<li><p>between 值1 and 值2  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 在值1和值2之间    </p>
+</li>
+<li>like     –通常配合通配符<code>%</code>和<code>_</code>一起使用</li>
+</ul>
+<p>注意: 如果条件是判断某个字段是否为空，不能使用<code>=null</code>和<code>&lt;&gt;null</code>要用<code>is null</code>  和 <code>is not null</code>  </p>
+<p><strong>SQL数据类型:</strong><br>在 MySQL 中，有三种主要的类型：文本、数字和日期/时间类型。  一下是MySQL中常见的数据类型。<a href="http://www.w3school.com.cn/sql/sql_datatypes.asp" target="_blank" rel="noopener">MySQL数据类型</a>    </p>
+<ul>
+<li>char(size)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 定长字符串  </li>
+<li>varchar(size)    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 保存可变长度的字符串（可包含字母、数字以及特殊字符）。在括号中指定字符串的最大长度。最多 255 个字符 </li>
+<li>text &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 存放最大长度为 65,535 个字符的字符串。  </li>
+<li>int(size)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; – -2147483648 到 2147483647 常规。0 到 4294967295 无符号*。在括号中规定最大位数。  </li>
+<li>FLOAT(size,d) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;–带有浮动小数点的小数字。在括号中规定最大位数。在 d 参数中规定小数点右侧的最大位数。  </li>
+<li>DOUBLE(size,d)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    –带有浮动小数点的大数字。在括号中规定最大位数。在 d 参数中规定小数点右侧的最大位数。  </li>
+<li>bit        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 相当于bool类型，只有0和1两个值  </li>
+<li>date  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 日期。格式：YYYY-MM-DD, 支持的范围是从 ‘1000-01-01’ 到 ‘9999-12-31’   </li>
+<li>DATETIME  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 日期和时间的组合。格式：YYYY-MM-DD HH:MM:SS  </li>
+<li>TIMESTAMP &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 时间戳。TIMESTAMP 值使用 Unix 纪元(‘1970-01-01 00:00:00’ UTC) 至今的描述来存储。格式：YYYY-MM-DD HH:MM:SS  </li>
+<li>TIME &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;– 时间。格式：HH:MM:SS 注释：支持的范围是从 ‘-838:59:59’ 到 ‘838:59:59’</li>
+</ul>
+<p><strong>SQL约束:</strong><br>not null   – 不能为空<br>default 值     – 设置默认值<br>primary key  – 主键约束（主键是表中能够唯一标识一条记录的列）<br>unique  – 值唯一   </p>
+<p>##5.约束管理  </p>
+<p>#####1.添加约束/索引<br>alter table 表名 add constraint 索引名 约束(字段名);  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;–给指定字典添加指定约束     </p>
+<p>#####2.删除索引<br>alter table 表名 drop index  索引名;  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;–移除指定索引对应的约束     </p>
+<p>#####3.添加外键约束<br>alter table 表名 add constraint 外键索引名 foreign key (字段1) references 表名2 (字段2)</p>
+<p>#####4.删除外键约束<br>alter table 表名 drop foreign key 外键索引名;</p>
+<p>##6.高级操作</p>
+<p>#####1.聚合<br>max() – 最大值<br>min() – 最小值<br>sum() – 求和<br>avg() – 求平均值<br>count() – 求个数  </p>
+<p>#####2.分组<br>group by(字段)   – 按照指定字段的值进行分组<br>注意: 如果是对分组后的结果进行筛选不能使用<code>where</code>而是使用<code>having</code>  </p>
+<p>#####3.连接<br>内连接:  inner join 表名 on 连接条件 </p>
+<p>左外连接就是把左表不满足连接条件的记录也查出来对应的记录补上null<br>左外连接: left outer join 表名 on 连接条件<br>右外连接:  right outer join 表名 on 连接条件  </p>
+<p>#####4.添加索引<br>create index 索引名 on 表(字段);<br>alter table 表名 drop index from 索引名;</p>
+<p>##7.DCL - grant/revoke  </p>
+<p>#####1.创建用户<br>create user ‘用户名‘@’登录地址’ identified by ‘密码’;  – 登录地址可以是<code>localhost</code>表示本机登录，也可以是指定的ip地址，还可以是<code>%</code>表示任意地址   </p>
+<p>#####2.授权<br>grant 权限类型 on 数据库.对象 to 用户;   – 为指定用户添加指定数据库的指定对象的指定权限<br>revoke 权限类型 on 数据库.对象 from 用户;   – 撤销/召回指定用户对指定数据库的指定对象的指定权限  </p>
+<p>权限类型: select(查看), insert(添加),delete(删除),update(更新),creat(创建),drop(删除), alter(更改), all privileges(所有权限)</p>
+<p>grant 权限类型 on 数据库.对象 to 用户 with grant option;   –添加权限，并且可以将自己的权限再授权给别人  </p>
+<p>#####3.事务<br>begin;    –开启事务环境<br>commit;    –事务提交<br>rollback;        –事务回滚  </p>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-22T09:24:49+08:00" content="2019-02-22">
-          02-22
-        </time>
+        
       </div>
-
-    </header>
-  </article>
-
-
+      
+      
       
     </div>
-
+    
+    
+    
   </div>
-  
-  
-  
-
-  
 
 
           </div>
@@ -335,6 +372,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -610,6 +654,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
